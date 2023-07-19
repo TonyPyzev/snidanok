@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:snidanok/core/constants/app_border_radius.dart';
-import 'package:snidanok/core/constants/app_colors.dart';
-import 'package:snidanok/core/constants/app_paddings.dart';
+
+import '../../../core/constants/app_border_radius.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_paddings.dart';
+import 'components/nutrition_progress_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String pageRoute = '/';
@@ -66,20 +68,43 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(height: AppPaddings.medium),
                   Container(
                     height: 325,
+                    padding: const EdgeInsets.symmetric(
+                      vertical: AppPaddings.regular,
+                      horizontal: AppPaddings.small,
+                    ),
                     decoration: BoxDecoration(
                       color: AppColors.lightBackground,
                       borderRadius: BorderRadius.circular(
                         AppBorderRadius.regular,
                       ),
                     ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        NutritionProgressBar(
+                          progress: 0.57,
+                          additionalText: '${(71 * 0.57).round()} з 71 г.',
+                          progressColor: const Color(0xFFE87C7C),
+                          label: 'Білки',
+                        ),
+                        NutritionProgressBar(
+                          progress: 0.81,
+                          additionalText: '${(108 * 0.81).round()} з 108 г.',
+                          progressColor: const Color(0xFF80C57E),
+                          label: 'Вугливоди',
+                        ),
+                        NutritionProgressBar(
+                          progress: 0.39,
+                          additionalText: '${(58 * 0.39).round()} з 58 г.',
+                          progressColor: const Color(0xFFE5D373),
+                          label: 'Жири',
+                        ),
+                      ],
+                    ),
                   ),
-                  Text('data'),
                 ],
               ),
             ),
-          ),
-          const Center(
-            child: Text('Snidanok'),
           ),
         ],
       ),

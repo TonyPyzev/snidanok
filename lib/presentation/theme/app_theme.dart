@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   ThemeData get lightTheme {
-    return ThemeData.light();
+    return ThemeData(
+      fontFamily: 'Nunito',
+    );
   }
 
   ThemeData get darkTheme {
-    return ThemeData.dark();
+    return lightTheme.copyWith();
   }
 }

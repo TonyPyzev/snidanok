@@ -13,7 +13,6 @@ class Application extends StatelessWidget {
     return MaterialApp(
       title: _title,
       theme: AppTheme().lightTheme,
-      darkTheme: AppTheme().darkTheme,
       debugShowCheckedModeBanner: false,
       initialRoute: Navigation.initialRoute,
       routes: Navigation.routes,

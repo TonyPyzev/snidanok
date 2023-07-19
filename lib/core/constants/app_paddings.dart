@@ -13,4 +13,7 @@ class AppPaddings {
 
   /// 16.0
   static const double small = 16.0;
+
+  /// 8.0
+  static const double tiny = 8.0;
 }
