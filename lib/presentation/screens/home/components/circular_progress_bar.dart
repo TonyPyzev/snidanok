@@ -75,12 +75,9 @@ class CircularProgressBar extends StatelessWidget {
 }
 
 class _CircularProgressBarPainter extends CustomPainter {
-  /// percent falue from .0 to 1.0
   final double progress;
   final Color progressColor;
   final Color progressBarColor;
-
-  /// default 5.0
   final double strokeWidth;
 
   _CircularProgressBarPainter(

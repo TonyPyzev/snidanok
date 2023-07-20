@@ -4,7 +4,7 @@ import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_paddings.dart';
 import 'circular_progress_bar.dart';
 
-class NutritionProgressBar extends StatelessWidget {
+class NutritionCircularProgressBar extends StatelessWidget {
   /// percent falue from .0 to 1.0
   final double progress;
   final Color progressColor;
@@ -17,7 +17,7 @@ class NutritionProgressBar extends StatelessWidget {
   final String additionalText;
   final String label;
 
-  const NutritionProgressBar({
+  const NutritionCircularProgressBar({
     super.key,
     required this.progress,
     required this.progressColor,
@@ -60,7 +60,7 @@ class NutritionProgressBar extends StatelessWidget {
               ),
             )
           ],
-        )
+        ),
       ],
     );
   }
